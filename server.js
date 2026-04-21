@@ -17,13 +17,23 @@ app.set("view engine", "ejs");
  
 //4routing code
 
-app.get("/Angel", function ( req , res) {
-    res.end(`<h1 style="background: red ">Hello World Im ANGEL</h1>`);
+// app.get("/Angel", function ( req , res) {
+//     res.end(`<h1 style="background: red ">Hello World Im ANGEL</h1>`);
+// });
+
+// app.get("/gold", function ( req , res) {
+//     res.end(`<h1 style="background: red ">Golden moments</h1>`);
+// });
+
+app.post("/create-item", (req, res) => {
+    console.log(req.body);
+    res.json({test: "success"});
 });
 
-app.get("/gold", function ( req , res) {
-    res.end(`<h1 style="background: red ">Golden moments</h1>`);
+app.get('/', function(req, res) {
+    res.render("harid");
 });
+
 
 
 const server = http.createServer(app);
