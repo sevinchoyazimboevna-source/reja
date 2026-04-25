@@ -51,3 +51,24 @@ async function run() {
     console.log(javob); 
 }
 run(); 
+
+
+
+
+console.log('+++++++++++++++++++');
+console.log("Train task !");
+console.log('+++++++++++++++++++++');
+
+//  MIDTASK
+
+let count = 0;
+function num(heart, inc) {
+    for (let i = 0; i < heart.length; i++) {
+        if (heart[i] === inc) {
+            count++
+        }
+    }
+    return count;
+}
+
+console.log(num("Mimi", "i"));
