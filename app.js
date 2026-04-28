@@ -1,6 +1,5 @@
 console.log('Web serverni boshlash');
 const express = require("express");
-const res = require("express/lib/response");
 const app = express();
 // const http = require("http");
 // const fs  = require("fs");
@@ -41,7 +40,7 @@ app.set("view engine", "ejs");
 // });
 
 app.post("/create-item", (req, res) => {
-
+     console.log("user entered /creat-item");
     console.log(req.body);
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja: new_reja }, (err, data) => {
@@ -52,13 +51,14 @@ app.post("/create-item", (req, res) => {
             res.end("successfully added");
         }
     });
-});
+});  
   
 // app.get("/author", (req, res) => { 
 //     res.render("author", {user: user});
 // });
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res) {  
+    console.log("user entered /");
     db.collection("plans")
     .find()
     .toArray((err, data) => {
@@ -66,14 +66,13 @@ app.get('/', function (req, res) {
             console.log(err);
             res.end("something went wrong");
         } else {
-            console.log(data);
-             res.render("reja");
+             res.render("reja", {items: data});
         }
-  });      
+  });          
 });
 
-
-module.exports = app;  
+  
+module.exports = app;        
 
 
 
