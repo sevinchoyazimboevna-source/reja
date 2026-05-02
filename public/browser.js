@@ -1,4 +1,4 @@
-const { response } = require("../app");
+// const { response } = require("../app");
 
 console.log("Fronted JS ishga tushdi");
 
@@ -13,12 +13,12 @@ function itemTemplate(item) {
         </button>
         <button 
         data-id="${item._id}"
-        class="delet-me btn btn-danger btn-sm">
+        class="delete-me btn btn-danger btn-sm">
          Ochirish
         </button>
      </div>
-    </li>`;
-}
+    </li>`  
+}  
 
 let createField = document.getElementById("create-field");
 
