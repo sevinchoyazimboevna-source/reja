@@ -16,6 +16,7 @@ const app = express();
 //MongoDB connect
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1;Kirish codlari
 
@@ -52,11 +53,22 @@ app.post("/create-item", (req, res) => {
 //     res.render("author", {user: user});
 // });
 
+app.post("/delete-item", (req, res) => {
+const id = req.body.id;
+// console.log(id);
+// res.end("done");
+db.collection("plans").deleteOne(
+{_id: new mongodb.ObjectId(id)},
+function(err, data) {
+    res.json({state: "success"});
+});
+});
+
 app.get('/', function (req, res) {  
     console.log("user entered /");
     db.collection("plans")
     .find()
-    .toArray((err, data) => {
+    .toArray((err, data) => {  
         if (err) {
             console.log(err);
             res.end("something went wrong");

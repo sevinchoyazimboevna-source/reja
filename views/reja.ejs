@@ -32,7 +32,7 @@
 
         <ul id="item-list" class="list-group pb-5" style="margin-top: 20px;">
              <%  items.map(function(item) { %>
-            <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
+    <li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
      <span class="item-text"><%=item.reja%></span>
      <div>
         <button
@@ -42,7 +42,7 @@
         </button>
         <button 
         data-id="<%=item._id%>" 
-        class="delet-me btn btn-danger btn-sm">
+        class="delete-me btn btn-danger btn-sm">
          Ochirish
         </button>
      </div>
@@ -54,7 +54,7 @@
             Hamma Rejalarni Ochirish
         </button>
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.11.0/axios.min.js" referrerpolicy="no-referrer"></script>
     <script src="/browser.js"></script>
 </body>

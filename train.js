@@ -59,7 +59,7 @@
 // console.log("Train task !");
 // console.log('+++++++++++++++++++++');
 
-// //  MIDTASK
+// //  MITTASK A
 
 // let count = 0;
 // function num(heart, inc) {
@@ -74,21 +74,26 @@
 // console.log(num("Mimi", "i"));
 
 
-//MID-TASK-B
+//MITTASK-B
 
-console.log("====================");
-console.log("Train task 2");
-console.log("====================");
+// console.log("====================");
+// console.log("Train task 2");
+// console.log("====================");
 
-let count = 0;
+// let count = 0;
 
-function calculate(tutu) {
- for(let i = 0; i < tutu.length; i++) {
-    if (tutu[i] <= 7 && tutu[i] >= 9) {
-        count ++
-    }
-  }
-    return count;
- }
- console.log(calculate("911cabriolet2027"));
+// function calculate(tutu) {
+//  for(let i = 0; i < tutu.length; i++) {
+//     if (tutu[i] <= 7 && tutu[i] >= 9) {
+//         count ++
+//     }
+//   }
+//     return count;
+//  }
+//  console.log(calculate("911cabriolet2027"));
+
+//MITTASK-C
+
+
+
 
