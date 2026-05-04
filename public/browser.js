@@ -60,6 +60,20 @@ console.log(e.target);
 
   //edit operation
   if(e.target.classList.contains("edit-me")) {
-    alert("siz edit tugmasini bosdingiz");
-  }
-})
+    let userInput = prompt(
+        "Ozgarish kiriting",
+        e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+        axios.
+        post("/edit-item", {
+            id: e.target.getAttribute("data-id"),
+            new_input: userInput,
+        }).then(response => {
+           console.log(response);
+        }).catch(err => {
+
+        })
+    }
+}
+});

@@ -144,9 +144,28 @@
 
 //MITASK-D
 
-function angel(a, b) {
-  return a !== b
-}
+// function angel(a, b) {
+//   return a !== b
+// }
  
-const result = angel("arbzil", "brazil");
-console.log("next:", result);
+// const result = angel("brazil", "brazil");
+// console.log("next:", result);
+
+const list1 = [];
+const list2 = [];
+function angel(item1, item2) {
+    for (let i = 0; i < item1.length; i++) {
+        list1.push(item1[i])
+        list1.sort()
+    }
+
+    for (let i = 0; i < item2.length; i++) {
+        list2.push(item2[i])
+        list2.sort()
+    }
+
+    return list1.toString() == list2.toString()
+ 
+}
+
+console.log(angel("brazil", "arbzil"));

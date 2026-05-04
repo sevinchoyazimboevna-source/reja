@@ -64,6 +64,15 @@ function(err, data) {
 });
 });
 
+
+app.post("/edit-item", (req, res) => {
+const data = req.body;
+console.log(data);
+res.end("done");
+});
+
+
+
 app.get('/', function (req, res) {  
     console.log("user entered /");
     db.collection("plans")
