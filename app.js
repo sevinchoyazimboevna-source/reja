@@ -1,4 +1,4 @@
-console.log('Web serverni boshlash');
+console.log('Web serverni boshlash'); //server .js ni ishlayotganini visual korsatib beradi
 const express = require("express");
 const app = express();
 // const http = require("http");
@@ -20,15 +20,15 @@ const mongodb = require("mongodb");
 
 // 1;Kirish codlari
 
-app.use(express.static("public")); 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true })); 
+app.use(express.static("public"));  //design pattern //public ochiqlash 
+app.use(express.json()); //json formatdagi datani object korinishiga otkazib beradi REST APP GA HISMAT QILADI
+app.use(express.urlencoded({ extended: true }));  //bu code bilan html traditional form da yozilgani express kabul qilib oladi  TRADITIONAL APP GA HISMAT
 
 //2 sessionga boglik kodlar
 //3views code
 
-app.set("views", "views");
-app.set("view engine", "ejs");  
+app.set("views", "views"); //BACKEND NI ICHIDA FRONTENDNI QURISH UCHUN 'BSSR' BACKEND SITE SERVER RENDERING
+app.set("view engine", "ejs");   //EJS PACAGE ORQALI BACKENDA FRONTENDNI QURAMIZ 
                 
 //4routing code
 
