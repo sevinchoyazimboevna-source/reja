@@ -179,13 +179,33 @@
 
 //MITASK-F
 
-function findDoublers(an) {
-  for (let i = 0; i < an.length; i++) {
-    if (an.indexOf(an[i]) !== i) {
-      return true;
+// function findDoublers(an) {
+//   for (let i = 0; i < an.length; i++) {
+//     if (an.indexOf(an[i]) !== i) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// console.log(findDoublers("hello")); // true
+
+//MITASK-G
+
+function getHighestIndex(a) {
+    let max = a[0];
+    let highestIndex = 0;
+
+    let i = 0;
+    for (let num of a) {
+        if (num > max) {
+            max = num;
+            highestIndex = i;
+        }
+        i++;
     }
-  }
-  return false;
+
+    return highestIndex;
 }
 
-console.log(findDoublers("hello")); // true
+console.log(getHighestIndex([5, 21, 122, 12, 8])); //0 dan boshlab katta sonini indexi 2 boladi
